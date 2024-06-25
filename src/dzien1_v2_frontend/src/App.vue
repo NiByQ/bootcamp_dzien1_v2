@@ -2,21 +2,18 @@
 <template>
   <main>
     <img src="/logo2.svg" alt="DFINITY logo" />
-    <br />
-    <br />
-    <p>hello world</p>
+    <br>
+    hello world 
     <br>
     {{ licznik }}
-    <input type="text" id="button1">
+    <button @click="iteruj">iteruj</button>
   </main>
 </template>
 
 <script>
-let but1 = document.getElementById('button1').addEventListener('click', function(){
-  iteruj();
-})
+
 export default{
-  date(){
+  data(){
     return{
       licznik: 0
     }
@@ -24,6 +21,7 @@ export default{
   methods: {
     iteruj() {
       this.licznik++
+      console.log("a");
     }
   },
 }
